@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Library Explorer</title>
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="w-2/3 bg-gray-100 p-4">
+        <input type="text" id="moduleInput" placeholder="Enter Python library name" class="w-full p-2 mb-4 border rounded">
+        <button id="loadButton" class="bg-blue-500 text-white py-2 px-4 rounded">Load Methods</button>
+        <div id="methodsContainer" class="grid grid-cols-4 gap-2 mt-4"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-4 rounded w-1/2 max-h-full overflow-y-auto">
+            <h2 id="modalTitle" class="text-xl font-bold mb-2"></h2>
+            <p id="modalContent"></p>
+            <button id="closeModal" class="bg-red-500 text-white py-2 px-4 rounded mt-4">Close</button>
+        </div>
+    </div>
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
